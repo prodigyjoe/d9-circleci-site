@@ -35,7 +35,7 @@ workflows: #Defines a list of jobs and their run order
                 name: Replace repo .gitignore so built codebase makes it to Pantheon  #Title of the step to be shown in the CircleCI UI
                 command: |  #Run the following commands via shell
                   rm -vf .gitignore
-                  rm -v pantheon.gitignore .gitignore
+                  mv -v pantheon.gitignore .gitignore
             #  - run: #Invoke all command-line programs
             #     name: Add Salesforce Key to the project root  #Title of the step to be shown in the CircleCI UI
             #     command: |  #Run the following commands via shell
