@@ -36,14 +36,14 @@ workflows: #Defines a list of jobs and their run order
                 command: |  #Run the following commands via shell
                   rm -vf .gitignore
                   rm -v pantheon.gitignore .gitignore
-             - run: #Invoke all command-line programs
-                name: Add Salesforce Key to the project root  #Title of the step to be shown in the CircleCI UI
-                command: |  #Run the following commands via shell
-                  set +e  #Run the following commands via shell
-                  cd ~/sitedir
-                  touch salesforce.key
-                  SALEFORCE_UNENCODED_VALUE=$(echo $UI_SALESFORCE_TOKEN | base64 -d)
-                  echo "$SALEFORCE_UNENCODED_VALUE" > ~/sitedir/salesforce.key
+            #  - run: #Invoke all command-line programs
+            #     name: Add Salesforce Key to the project root  #Title of the step to be shown in the CircleCI UI
+            #     command: |  #Run the following commands via shell
+            #       set +e  #Run the following commands via shell
+            #       cd ~/sitedir
+            #       touch salesforce.key
+            #       SALEFORCE_UNENCODED_VALUE=$(echo $UI_SALESFORCE_TOKEN | base64 -d)
+            #       echo "$SALEFORCE_UNENCODED_VALUE" > ~/sitedir/salesforce.key
             post-steps: #Steps executed after all the other steps
             - run:  #Invoke all command-line programs
                 name: Set Pantheon environment connection back to git #Title of the step to be shown in the CircleCI UI
