@@ -121,11 +121,11 @@ jobs: #collections of steps, which run commands/scripts as required. key(name of
       #     paths:
       #       - node_modules
 
-      # - persist_to_workspace: #Special step used to persist a temporary file to be used by another job in the workflow
-      #     root: . #Either an absolute path or a path relative to working_directory
-      #     paths:  #Glob identifying file(s), or a non-glob path to a directory to add to the shared workspace. Interpreted as relative to the workspace root. Must not be the workspace root itself.
-      #       - web #(working_directory)/var/www/web
-      #       - vendor  #(working_directory)/var/www/vendor
-      #       - web/themes/custom/lyndon/lyndon_build #(working_directory)/var/www/web/themes/custom/lyndon/lyndon_build
+      - persist_to_workspace: #Special step used to persist a temporary file to be used by another job in the workflow
+          root: . #Either an absolute path or a path relative to working_directory
+          paths:  #Glob identifying file(s), or a non-glob path to a directory to add to the shared workspace. Interpreted as relative to the workspace root. Must not be the workspace root itself.
+            - web #(working_directory)/var/www/web
+            - vendor  #(working_directory)/var/www/vendor
+            - web/themes/custom/lyndon/lyndon_build #(working_directory)/var/www/web/themes/custom/lyndon/lyndon_build
 
 # VS Code Extension Version: 1.4.0 
