@@ -1,0 +1,13 @@
+# Put overrides to your pantheon.upstream.yml file here.
+# For more information, see: https://pantheon.io/docs/pantheon-yml/
+api_version: 1
+php_version: 8.1 #Php version from the pantheon site(Report> Status report> General system)
+database:
+  version: 10.4 #Database version from the pantheon site(Report> Status report> General system)
+drush_version: 10 #Drush version from the composer.json file
+# search:
+#   version: 8
+# Overrides pantheon.upstream.yml
+web_docroot: true
+# Ticket 562410 - Disable Integrated Composer
+build_step: false #Disable upstream updates
